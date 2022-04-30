@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: local('Pretendard-Regular'), url('../fonts/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: local('Pretendard-Bold'), url('../fonts/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html, body { width: 100%; height: 100%; --webkit-touch-callout: none; }
+html, body, form, fieldset, img { margin: 0; padding: 0; border: none; }
+p, h1, h2, h3 { margin: 0.1em; padding: 0; border: 0; }
+ul, dl, dt, dd { margin: 0; padding: 0; list-style: none; }
+a { display: inline-block; color: #000; text-decoration: none; }
+*, :after, :before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+input { -webkit-border-radius: 0; -webkit-appearance: none; }
+input:checked[type="checkbox"] { background: #ffffff; -webkit-appearance: checkbox; }
+img { width: 100%; }
+body { position: relative; padding-top: 56px; font-family: Pretendard-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI",  "맑은 고딕", "Malgun Gothic",
+Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+"Segoe UI Symbol"; font-weight: 400; background-color: #f9f9f9; overflow-x: hidden; }
+
+.mb3 { margin-bottom: 3px; }
+.mb5 { margin-bottom: 5px; }
+.w100 { width: 100%; }
+.bold { font-family: "Pretendard-Bold"; font-weight: bold; }
+
+.navbar { display: flex; position: fixed; top: 0; left: 0; right: 0; z-index: 9999; align-items: center; padding: 10px 0; background-color: #ffffff; border-bottom: 1px solid #f4f5f5; }
+.navbar .title-container { justify-content: center; flex: 1; text-align: center; }
+.navbar .title-container span { font-size: 17px; color: #424754; }
+
+.container { position: relative; width: 100%; max-width: 600px; height: 100%; display: flex; flex-direction: column; margin: 0 auto; padding: 0 30px; justify-content: center; text-align: center; font-size: 14px; color: #81848e; }
+.container .content { display: flex; flex-direction: column; justify-content: center; margin-bottom: 50px; }
+
+.slot-machine__container { position: relative; width: 100%; height: 70px; overflow: hidden; background-color: #ffffff; border: 1px solid #efefef; border-radius: 5px; }
+.slot-machine__container .list { position: absolute; top: 0; left: 0; width: 100%; height: 100%; margin: 0; background-color: #ffffff; border: none; animation-duration: 5s; animation-timing-function: linear; transform-style: preserve-3d; transform-origin: 50% 100%; animation-iteration-count: 1; animation-fill-mode: both; }
+.slot-machine__container .list.rolling { animation-name: rotate1; }
+.slot-machine__container .list .item { display: inline-flex; position: absolute; top: 0; left: 0; list-style: none; width: 100%; height: 70px; font-family: Pretendard-Bold; font-size: 18px; font-weight: 600; justify-content: center; align-items: center; background-color: #ffffff; border: none; transform-origin: 50% 50%; }
+.slot-machine__container .list .item:nth-child(1) { transform: rotateX(0deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(2) { transform: rotateX(36deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(3) { transform: rotateX(72deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(4) { transform: rotateX(108deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(5) { transform: rotateX(144deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(6) { transform: rotateX(180deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(7) { transform: rotateX(216deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(8) { transform: rotateX(252deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(9) { transform: rotateX(288deg) translateZ(85px); }
+.slot-machine__container .list .item:nth-child(10) { transform: rotateX(324deg) translateZ(85px); }
+
+.container .content .bonus-pick__container { display: flex; width: 100%; min-height: 30px; margin-top: 15px; justify-content: center; align-items: center; }
+.container .content .bonus-pick__container .title { margin-right: 15px; font-family: Pretendard-Bold; font-weight: bold; }
+.container .content .bonus-pick__container .item { padding: 3px 5px; border: 1px solid #e3e3e3; border-radius: 10px; }
+
+@keyframes rotate1 {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(-1320deg); }
+    70% { transform: rotateX(-1370deg); }
+    90% { transform: rotateX(-1405deg); }
+    100% { transform: rotateX(-1440deg); }
+}

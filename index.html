@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>ㅑ
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>점심은 소중하니까</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="title-container center">
+            <span class="bold">점심은 소중하니까</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="slot-machine__container">
+                <ul class="list">
+                    <li class="item">메뉴를 랜덤으로 골라 보세요</li>
+                </ul>
+            </div>
+
+            <div class="bonus-pick__container">
+
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="btn btn-primary refresh-button w100">랜덤 Pick</button>
+        </div>
+    </div>
+<script src="./assets/js/index.js"></script>
+</body>
+</html>
+
+<script type="text/template" id="item__template">
+<div class="item">
+    <div class="type">
+        <span>{type}</span>
+    </div>
+
+    <div class="name">
+        <span>{name}</span>
+    </div>
+</div>
+</script>
+
+<script type="text/template" id="slot-item__template">
+    <li class="item">{name}</li>
+</script>
+
+<script type="text/template" id="bonus-pick__item__template">
+    <span class="title">Bonus Pick</span>
+    <span class="item">{name}</span>
+</script>
