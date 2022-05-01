@@ -17,8 +17,6 @@ const list = [
             "김가네 숯불갈비",
             "대아 감자탕",
             "신사골 감자탕",
-            "생고기 김치찌개",
-            "고향추어탕",
             "신주옥미 순대국",
             "부자 감자탕",
             "강릉 짬뽕 순두부",
@@ -28,6 +26,8 @@ const list = [
             "갈마칼국수",
             "장지리막국수",
             "백년가",
+            "길샤브샤브",
+            "동태탕",
         ]
     },
     {
@@ -76,7 +76,9 @@ const composeRandomList = () => {
         })
     })
 
-    shuffleArray(result);
+    for (let i = 0; i < 50; i++) {
+        shuffleArray(result);
+    }
 }
 
 const renderRandomList = () => {
